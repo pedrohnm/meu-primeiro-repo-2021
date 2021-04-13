@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico Estático - Pedro Menezes</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    
+<style>
+    .meu-grafico {
+    width: 70%;
+    margin: auto;
+}
+</style>
+
+</head>
+
+<body>
+    
+    <div class="meu-grafico">
+        <canvas id="myChart"></canvas>
+    </div>
+   
+</body>
+
+</html>
+
+<script>
+    var ctx = document.getElementById('myChart');
+    
+    var meuGrafico = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+            datasets: [    
+            {
+                label: "Exportações",
+                data: [260, 250, 238, 223, 198, 189, 219, 238, 215, 209],
+                borderWidth: 2,
+                borderColor: 'rgba(0, 119, 244, 0.7)',
+                backgroundColor: 'rgba(0, 119, 244, 0.7)',
+            },
+
+            {
+                type: 'bar',
+                label: "Importações",
+                data: [230, 228, 236, 226, 175, 141, 152, 190, 186, 158],
+                borderWidth: 2,
+                borderColor: 'rgba(32, 210, 0, 0.9)',
+                backgroundColor: 'rgba(32, 210, 0, 0.7)'
+            }
+            ]
+        },
+        
+        options: {
+            
+            title: {
+                display: true,
+                fontSize: 35,
+                text: "Balança comercial brasileira (US$ bi)",
+                position: 'top',
+            },
+            legend: {
+                display: true,
+                reverse: false,
+                position: 'bottom'
+            },
+            layout: {
+            padding: {
+                left: 50,
+                top: 50
+            },
+        }
+        }
+    })
+
+    Chart.defaults.global.defaultFontColor = "#5e5e5e";
+</script>

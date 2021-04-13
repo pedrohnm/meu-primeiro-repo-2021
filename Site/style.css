@@ -332,3 +332,30 @@ body {
             height: 150px;
             border-radius: 15px;
         }
+
+
+
+/* LOGIN */
+
+
+.pag-login {
+    background-color: rgb(255, 220, 174);
+}
+
+.box-login {
+    background-color: rgb(235, 235, 235);
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 5px 7px 15px 3px saddlebrown;
+        /* Box-shadow:
+                1º número: Coordenadas em x (horizontal);
+                2º número: Coordenadas em y (vertical);
+                3º número: Intensidade do 'blur';
+                4º número: Expansão do 'blur';
+        */
+}
+
+    .box-login h1 {
+        margin: 0;
+    }
