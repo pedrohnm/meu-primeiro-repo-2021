@@ -1,0 +1,345 @@
+/*------------------------------------------Configurações Iniciais do site--------------------------------------------*/
+
+/* Retirando a margem padrão de 8px*/
+body {
+    margin: 0;
+    position: relative;
+}
+
+/*Aplicando o efeito "border-box" a todos os elementos do site*/
+* {
+    box-sizing: border-box;
+}
+
+/*Aplicando o efeito de scrolling suave para o site*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Adicionando um 'respiro' lateral na página*/
+.container {
+    width: 90%;
+}
+
+/*Adicionando uma "tela escura", para diminuir o brilho das imagens de fundo dos banners*/
+.darken {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+/*-------------------------------------------------------Header-------------------------------------------------------*/
+
+.header {
+    min-height: 200px;
+    max-height: 250px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-image: url(imgs/header\ background2.png);
+    background-size: cover;
+    border-bottom: transparent 20px solid;
+    border-image: url(imgs/Iron\ border.jpg) 1122 84 1122 1215 round;
+}
+
+.logobox {
+    height: 100px;
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Grenze Gotisch;
+    font-size: 90px;
+    font-weight: 500;
+    color: #ffaf01;
+}
+
+    .logobox img {
+        height: inherit;
+    }
+
+.welcome img{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 832px;
+}
+
+.welcome span{
+    height: 150px;
+    width: 250px;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    top: 2rem;
+    right: 52rem;
+    font-family: Grenze Gotisch;
+    color: rgb(255, 211, 66);
+    font-size: 40px;
+    text-shadow: rgb(255, 145, 0) 0.06em 0.06em 0.12em;
+}
+
+.navbar {
+    height: 100px;
+    width: 750px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Grenze Gotisch;
+    font-size: 55px;
+    font-weight: 500;
+}
+
+    .normal {
+        text-decoration: none;
+        color: #494e4e;
+        transition: 0.2s;
+    }
+    
+    .highlight {
+        text-decoration: none;
+        color: #f3ffff;
+        font-size: 60px;
+    }
+
+    .navbar a:hover{
+        font-size: 60px;
+        color: #f3ffff;
+    }
+
+
+/*--------------------------------------------------------Home----------------------------------------------------*/
+
+.home-banner {
+    width: 100%;
+    height: 769px;
+    position: relative;
+    background-image: url(imgs/wow_wp1.png);
+    background-size: cover;
+}
+
+.home-content-box {
+    height: inherit;
+    position: absolute;
+    margin: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: white;
+    font-size: 25px;
+}
+
+/*----------------------------------------------------------Login---------------------------------------------------*/
+
+.login-banner {
+    width: 100%;
+    height: 769px;
+    position: relative;
+    background-image: url(imgs/arthas_wp.jpg);
+    background-size: cover;
+}
+
+.login-content-box {
+    height: 350px;
+    width: 700px;
+    position: absolute;
+    left: 58%;
+    bottom: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(179.9deg, #2B2135 0.09%, #A0B2CE 99.91%);
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #000000 0%, rgba(101, 119, 147, 0) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    font-size: 25px;
+}
+
+.login_card {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    font-family: Grenze Gotisch;
+}
+
+.box-login {
+    padding-bottom: 3%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: rgb(36, 36, 36) double 1px;
+}
+
+.box-login label {
+    width: 80%;
+}
+
+.box-login input {
+    font-family: Grenze Gotisch;
+    font-size: 25px;
+    width: 90%;
+}
+
+.box-cadastro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.box-cadastro img {
+    height: 150px;
+}
+
+.box-cadastro a {
+    text-decoration: none;
+}
+
+/*------------------------------------------------------Cadastro------------------------------------------------------*/
+
+.cadastro-banner {
+    width: 100%;
+    height: 769px;
+    position: relative;
+    background-image: url(imgs/arthas_wp.jpg);
+    background-size: cover;
+}
+
+.cadastro-content-box {
+    height: 560px;
+    width: 370px;
+    padding-bottom: 1%;
+    position: absolute;
+    left: 70%;
+    bottom: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Grenze Gotisch;
+    background: linear-gradient(179.9deg, #2B2135 0.09%, #A0B2CE 99.91%);
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #000000 0%, rgba(101, 119, 147, 0) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    font-size: 25px;
+}
+
+.cadastro-content-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-content-box p {
+    margin: 2% 0;
+    font-size: 35px;
+    text-align: center;
+}
+
+.cadastro-content-box label {
+    width: 90%;
+    text-align: center;
+}
+
+.cadastro-content-box input {
+    font-family: Grenze Gotisch;
+    font-size: 20px;
+    text-align: center;
+    width: 90%;
+    
+}
+
+.btn-cadastro {
+    text-shadow: 0 -0.05em 0.2em #e8e8e8, 
+                    0.01em -0.02em 0.15em #64b6ff, 
+                    0.01em -0.05em 0.15em #a2dcff, 
+                    0.02em -0.15em 0.2em #008eff, 
+                    0.04em -0.2em 0.3em #474ea2, 
+                    0.05em -0.25em 0.4em #9b7eff, 
+                    0.06em -0.2em 0.9em #adabff, 
+                    0.1em -0.1em 1em #007cff;
+    color: #ffe;
+    text-align: center;
+    background-color: #2B2135;
+    width: 150px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.btn-cadastro:hover {
+    text-shadow: 0 -0.05em 0.2em #fff, 
+                    0.01em -0.02em 0.15em #fe0, 
+                    0.01em -0.05em 0.15em #fc0, 
+                    0.02em -0.15em 0.2em #f90, 
+                    0.04em -0.2em 0.3em #f70, 
+                    0.05em -0.25em 0.4em #f70, 
+                    0.06em -0.2em 0.9em #f50, 
+                    0.1em -0.1em 1em #f40;
+    background-color: rgb(65, 0, 0);
+}
+
+.cadastro-content-box a {
+    text-decoration: none;
+}
+
+/*-------------------------------------------------------Footer-------------------------------------------------------*/
+
+/*Fixando o footer no final da página*/
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 95px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    font-family: Jost;
+    background-image: url(imgs/header\ background1.jpg);
+    border-top: transparent 20px solid;
+    border-image: url(imgs/Iron\ border.jpg) 1122 84 1122 1215 round;
+}
+
+.disclaimer{
+    width: 40rem;
+    color: rgb(255, 230, 183);
+    text-align: justify;
+    font-size: 13px;
+    margin: 0;
+}
+
+.developer {
+    width: 20rem;
+    color: white;
+}
+
+    .developer img{
+        height: 50px;
+    }
+
+    .developer a{
+        text-decoration: none;
+        font-size: 20px;
+        color: rgb(112, 223, 208);
+    }

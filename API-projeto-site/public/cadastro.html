@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleprojeto.css">
+    <link rel="icon" href="imgs/WoW Icon.png">
+
+    <!-- Adicionando fontes do Google Fonts e efeitos-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grenze Gotisch&effect=fire">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <title>Login - Warcraft Universe</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logobox">
+            <img src="imgs/WoW Icon.png" alt="">
+            <span class="font-effect-fire">Warcraft Universe</span>
+        </div>
+
+        <div class="welcome">
+            <img src="imgs/red_banner.png">
+            <span id="welcome_msg">Boas-vindas, viajante!</span>
+        </div>
+
+        <div class="navbar font-effect-fire">
+            <li><a class="normal" href="index.html">Home</a></li>
+            <li><a class="normal" href="login.html">Login</a></li>
+            <li><a class="normal" href="">Lore</a></li>
+            <li><a class="normal" href="">Quiz</a></li>
+            <li><a class="normal" href="">Rally</a></li>
+        </div>
+    </div>
+
+    <div class="cadastro-banner">
+        <div class="darken">
+            <div class="cadastro-content-box">
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                    <p>Cadastre seus dados:</p>
+                    <label>
+                        Nome Completo: <br>
+                        <input type="text" id="in_nome" autofocus maxlength="100" spellcheck="false" name="nome"><br>
+                    </label>
+                    <label>
+                        Nome de Usuário: <br>
+                        <input type="text" id="in_usuario" maxlength="20" spellcheck="false" name="login_html"><br>
+                    </label>
+                    <label>
+                        E-mail: <br>
+                        <input type="text" id="in_email" maxlength="80" spellcheck="false" name="email"><br>
+                    </label>
+                    <label>
+                        Senha: <br>
+                        <input type="password" id="in_senha" maxlength="30" spellcheck="false" name="senha"><br>
+                    </label>
+                    <label>
+                        Confirme sua senha: <br>
+                        <input type="password" id="in_confirmar" maxlength="30" spellcheck="false">
+                    </label><br>
+                    <a href=""><div class="btn-cadastro">Cadastrar</div></a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="disclaimer">
+            Disclaimer: Este projeto é uma homenagem à franquia de jogos <b>Warcraft</b>, 
+            propriedade legal da Activision Blizzard Inc. O conteúdo utilizado neste site não possui fins comerciais. 
+            Todas as imagens, personagens e narrativas relacionadas ao universo <b>Warcraft</b> aqui 
+            apresentadas são de total mérito da empresa supracitada.
+        </div>
+
+        <div class="developer">
+            Desenvolvido por <a href="https://www.linkedin.com/in/pedro-menezes-275979b6/">Pedro Menezes</a>
+            <a href="https://github.com/pedrohnm"><img src="imgs/git icon.png"></a>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+            }
+        });
+
+        return false;
+    }
+</script>
